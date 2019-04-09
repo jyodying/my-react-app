@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 
-class App extends Component {
+class Appx extends Component {
   render() {
     return (
       <div className="App">
@@ -23,6 +23,23 @@ class App extends Component {
       </div>
     );
   }
+}
+
+//export default Appx;
+
+function App() {
+  return (
+    <div>
+      <h1>Jedsada Yodying</h1>
+      <p>This is paragraph about me&hellip;</p>
+      <ol>
+        <li>Montreal</li>
+        <li>Tokyo</li>
+        <li>New Orleans</li>
+      </ol>
+    </div>
+  )
+
 }
 
 export default App;
