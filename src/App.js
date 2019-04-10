@@ -1,6 +1,11 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import Navbar from './Navbar';
+import MainContent from './MainContent';
+import Footer from "./Footer"
+
+
 
 class Appx extends Component {
   render() {
@@ -30,13 +35,9 @@ class Appx extends Component {
 function App() {
   return (
     <div>
-      <h1>Jedsada Yodying</h1>
-      <p>This is paragraph about me&hellip;</p>
-      <ol>
-        <li>Montreal</li>
-        <li>Tokyo</li>
-        <li>New Orleans</li>
-      </ol>
+      <Navbar />
+      <MainContent />
+      <Footer />
     </div>
   )
 
