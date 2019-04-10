@@ -36,22 +36,31 @@ class Appx extends Component {
 function App() {
   const firstName = "Jedsada";
   const lastName = "Yodying";
-  const date = new Date();
+  const date = new Date(2018, 4, 10, 11, 56);
   const hours = date.getHours();
   let timeOfDay;
+  const h1Styles = {
+    color: "#FF8C00",
+    backgroundColor: "#FF2D00",
+    fontSize: "48px"
+  }
 
   if (hours < 12) {
-    timeOfDay = "morning"
+    timeOfDay = "morning";
+    h1Styles.color = "#04756F"
   } else if (hours >= 12 && hours < 17) {
-    timeOfDay = "afternoon"
+    timeOfDay = "afternoon";
+    h1Styles.color = "#2E0927"
   } else {
-    timeOfDay = "night"
+    timeOfDay = "night";
+    h1Styles.color = "#D90000"
   }
+
 
 
   return (
     <div>
-      <h1>Good {timeOfDay}!</h1>
+      <h1 style={h1Styles}>Good {timeOfDay}!</h1>
       <h1>It is currently about {date.getHours() % 12} o'clock</h1>
       <h1>Hello {firstName + " " + lastName}!</h1>
       <h1>Hello {`${firstName} ${lastName}`}!</h1>
@@ -59,7 +68,7 @@ function App() {
       <Navbar />
       <MainContent />
       <Footer />
-    </div>
+    </div >
   )
 
 }
