@@ -34,8 +34,27 @@ class Appx extends Component {
 //export default Appx;
 
 function App() {
+  const firstName = "Jedsada";
+  const lastName = "Yodying";
+  const date = new Date();
+  const hours = date.getHours();
+  let timeOfDay;
+
+  if (hours < 12) {
+    timeOfDay = "morning"
+  } else if (hours >= 12 && hours < 17) {
+    timeOfDay = "afternoon"
+  } else {
+    timeOfDay = "night"
+  }
+
+
   return (
     <div>
+      <h1>Good {timeOfDay}!</h1>
+      <h1>It is currently about {date.getHours() % 12} o'clock</h1>
+      <h1>Hello {firstName + " " + lastName}!</h1>
+      <h1>Hello {`${firstName} ${lastName}`}!</h1>
       <Header />
       <Navbar />
       <MainContent />
