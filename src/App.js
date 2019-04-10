@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import Header from './Header';
 import Navbar from './Navbar';
 import MainContent from './MainContent';
 import Footer from "./Footer"
@@ -35,6 +36,7 @@ class Appx extends Component {
 function App() {
   return (
     <div>
+      <Header />
       <Navbar />
       <MainContent />
       <Footer />
