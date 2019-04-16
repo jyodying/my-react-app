@@ -1,10 +1,15 @@
 import React from 'react';
-import TodoItem from './TodoItem'
+
 import Contacts from './Contacts';
+
 import Joke from './Joke';
 import jokesData from "./jokesData"
+
 import Product from './Product';
 import productsData from "./vschoolProducts"
+
+import TodoItem from "./TodoItem"
+import todosData from "./todosData"
 
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map
@@ -16,10 +21,12 @@ import productsData from "./vschoolProducts"
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/findindex
 
 function MainContent() {
+    const todoComponents = todosData.map(item => <TodoItem key={item.id} completed={item.completed} text={item.text} />)
     const productComponents = productsData.map(item => <Product key={item.id} product={item} />)
     const jokeComponents = jokesData.map(joke => <Joke key={joke.id} question={joke.question} punchLine={joke.punchLine} />)
     return (
         <main>
+            {todoComponents}
             {productComponents}
             {jokeComponents}
             <Joke punchLine="It’s hard to explain puns to kleptomaniacs because they always take things literally." />
