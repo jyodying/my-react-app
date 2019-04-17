@@ -33,7 +33,7 @@ class Appx extends Component {
 
 //export default Appx;
 
-function App() {
+/*function App() {
   const firstName = "Jedsada";
   const lastName = "Yodying";
   const date = new Date(2018, 4, 10, 11, 56);
@@ -68,9 +68,19 @@ function App() {
       <Navbar />
       <MainContent />
       <Footer />
-    </div >
+    </div>
   )
 
+}*/
+
+class App extends React.Component {
+  render() {
+    return (
+      <div>
+        <h1>Code goes here</h1>
+      </div>
+    )
+  }
 }
 
 export default App;
