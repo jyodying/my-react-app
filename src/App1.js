@@ -18,6 +18,12 @@ import Footer from "./Footer"
 import TodoItem1 from "./TodoItem1"
 import todosData from "./todosData"
 
+function handleClick() {
+    console.log("I was clicked")
+}
+
+// https://reactjs.org/docs/events.html#supported-events
+
 class App1 extends Component {
     constructor() {
         super()
@@ -31,6 +37,10 @@ class App1 extends Component {
         return (
             <div className="todo-list">
                 {todoItems}
+                <img onMouseOver={() => console.log("Hovered!")} src="https://www.fillmurray.com/200/100" alt="" />
+                <br />
+                <br />
+                <button onClick={handleClick}>Click me</button>
             </div>
         )
     }
